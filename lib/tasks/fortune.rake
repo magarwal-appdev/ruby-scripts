@@ -1,5 +1,5 @@
 desc "Print a random fortune"
-task :fortune do
+task :fortune do 
   fortunes = [
     "Do not mistake temptation for opportunity",
     "A friend asks only for your time not your money",
@@ -8,8 +8,6 @@ task :fortune do
     "Every day in your life is a special occasion"
   ]
 
-  # =====================================================================
-  # Your code goes below.
-  # =====================================================================
+  ap fortunes.sample
 
 end

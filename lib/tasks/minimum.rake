@@ -8,6 +8,17 @@ task :minimum do
   # Your code goes below.
   # The numbers from the file are in the array `numbers`.
   # =====================================================================
+  
+  min = numbers[0]
+  numbers.each do |num|
+    if num < min
+      min = num
+    end
+  end
+  
+  ap "Your numbers:"
+  ap numbers
+  ap "Minimum: " + min.to_s
 
   # MINIMUM
   # =======
@@ -22,4 +33,6 @@ task :minimum do
   #      - I replace the previous min with it.
   #    - If not, I do nothing and go to the next element.
   #  - After we've looked at every element, what we're left with should be the real minimum
+
+  
 end

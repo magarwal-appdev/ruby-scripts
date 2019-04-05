@@ -11,6 +11,13 @@ task :range do
 
   # RANGE
   # =====
+  max = numbers.max
+  min = numbers.min
+  range = (max - min).round(1)
+
+  ap "Your numbers:"
+  ap numbers
+  ap "Range: " + range.to_s
 
   # To find the range of a set of numbers,
   #  - Find the maximum

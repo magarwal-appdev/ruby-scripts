@@ -11,7 +11,16 @@ task :sum do
 
   # SUM
   # ===
-
+  sum = 0
+  numbers.each do |num|
+    sum = sum + num
+  end
+  
+  ap "Your numbers:"
+  ap numbers
+  ap "Sum: " + sum.to_s
+  
+  
   # To find the sum of a set of numbers,
   #  - we start with 0
   #  - for each number in the set,

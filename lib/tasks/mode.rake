@@ -8,7 +8,18 @@ task :mode do
   # Your code goes below.
   # The numbers from the file are in the array `numbers`.
   # =====================================================================
-
+  max_count = 0
+  mode = nil
+  numbers.each do |num|
+    if numbers.count(num) > max_count
+      max_count = numbers.count(num)
+      mode = num
+    end
+  end
+  
+  ap "Sorted Numbers: "
+  ap numbers.sort
+  ap "Mode: " + mode.to_s
   # MODE
   # ====
 

@@ -9,5 +9,9 @@ end
 
 desc "Create a new input file and read from it"
 task :your_own_input_from_file do
+  path_file = Rails.root + "lib/input_files/mynewfile.txt"
+  ap(open(path_file).read)
 
 end
+
+

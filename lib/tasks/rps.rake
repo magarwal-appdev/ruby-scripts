@@ -1,20 +1,53 @@
 desc "Play rock in rock-paper-scissors"
 task :play_rock do
-  # Print the move we played
+  ap "We played rock!"
 
-  # Select a random move for the computer
+  moves=["rock", "paper", "scissors"]
 
-  # Print the move the computer played
+  comp_move = moves.sample
+  ap "The computer chose " + comp_move
 
-  # Print the outcome of the game
+  if comp_move == "rock"
+    ap "We tied!"
+  elsif comp_move == "paper"
+    ap "We lost!"
+  else ap "We won!"
+  end
+  
 end
 
 desc "Play paper in rock-paper-scissors"
 task :play_paper do
+  ap "We played paper!"
+
+  moves=["rock", "paper", "scissors"]
+
+  comp_move = moves.sample
+  ap "The computer chose " + comp_move
+
+  if comp_move == "paper"
+    ap "We tied!"
+  elsif comp_move == "scissors"
+    ap "We lost!"
+  else ap "We won!"
+  end
 
 end
 
 desc "Play scissors in rock-paper-scissors"
 task :play_scissors do
+  ap "We played scissors!"
+
+  moves=["rock", "paper", "scissors"]
+
+  comp_move = moves.sample
+  ap "The computer chose " + comp_move
+
+  if comp_move == "scissors"
+    ap "We tied!"
+  elsif comp_move == "rock"
+    ap "We lost!"
+  else ap "We won!"
+  end
 
 end

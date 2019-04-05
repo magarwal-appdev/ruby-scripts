@@ -3,7 +3,21 @@ task :median do
   path_to_file = Rails.root + "lib/input_files/descriptive_statistics_numbers.txt"
   input = open(path_to_file).read.chomp
   numbers = input.gsub(",", "").split.map(&:to_f)
+  
+  numbers = numbers.sort
+  arr_len = numbers.length
+  
+  if arr_len % 2 == 0
+   median = (numbers[arr_len/2] + numbers[(arr_len/2)-1])/2 #array index starts with 0 hence doing so
+  else
+    median = numbers[arr_len/2]
+  end
+  
+  ap "Sorted Numbers:"
+  ap numbers
+  ap "Median: " + median.to_s
 
+end
   # =====================================================================
   # Your code goes below.
   # The numbers from the file are in the array `numbers`.
@@ -21,4 +35,4 @@ task :median do
   #    - find the number to the left of the middle number
   #    - find the number to the right of the middle number
   #    - average the left and right numbers and save it as your median
-end
+

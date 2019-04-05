@@ -9,7 +9,19 @@ task :maximum do
   # The numbers from the file are in the array `numbers`.
   # =====================================================================
 
-  # MINIMUM
+  max = numbers[0]
+  numbers.each do |num|
+    if num > max
+      max = num
+    end
+  end
+  
+  ap "Your numbers:"
+  ap numbers
+  ap "Maximum: " + max.to_s
+
+
+  # MAXIMUM
   # =======
 
   # Yes, we realize that we could just use .max, but don't; instead, practice using .each to solve this problem.

@@ -38,3 +38,7 @@ namespace :solution do
     list_of_movies.to_csv("coming_soon.csv")
   end
 end
+
+
+
+# to run this rails solutions:movies -- you have two tasks with name movies -- this is how you will run this one and rails movies just runs that
